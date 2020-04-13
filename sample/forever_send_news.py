@@ -1,5 +1,5 @@
-import news_sender
-import use_files
+import send_news
+from furtherpy.sample import files_tool
 import time
 
 
@@ -10,7 +10,7 @@ while 1:
 
     except Exception as e:
         # saves error file
-        use_files.basic_write_file("send_news_crash_report", "send_news crashed with the exception: " + str(e))
+        files_tool.basic_write_file("send_news_crash_report", "send_news crashed with the exception: " + str(e))
 
         print("\n[forever_send_news] The error: '" + str(e) +
               "' occurred while running send_news.py.\nTrying again...\n")
